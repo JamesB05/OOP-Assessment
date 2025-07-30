@@ -19,7 +19,7 @@ namespace OOP_Assessment
             AttackingPower = attackingPower;
         }
 
-        public abstract void Attack(Creature target);
+        
 
         public void TakeDamage(int amount)
         {
@@ -41,6 +41,12 @@ namespace OOP_Assessment
         {
             AttackingPower += amount;
             Console.WriteLine($"{Name}'s attack power increased by {amount}. New power: {AttackingPower}");
+        }
+
+        public void Attack(Creature target)
+        {
+            target.Health -= this.AttackingPower;
+            Console.WriteLine($"{Name} attacks {target.Name} for {AttackingPower} damage!");
         }
     }
 }

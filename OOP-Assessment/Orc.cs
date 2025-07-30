@@ -10,7 +10,7 @@ namespace OOP_Assessment
     {
         public Orc() : base("Orc", 30, 5) { }
 
-        public override void Attack(Creature target)
+        public virtual void Attack(Creature target)
         {
             Console.WriteLine("The Orc lunges his Warhammer towards you!");
             target.TakeDamage(AttackingPower);

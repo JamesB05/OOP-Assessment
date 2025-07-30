@@ -9,7 +9,7 @@ namespace OOP_Assessment
     public class Beholder : Monsters
     {
         public Beholder() : base("Beholder", 200, 30) { }
-        public override void Attack(Creature target)
+        public virtual void Attack(Creature target)
         {
             Console.WriteLine("The Beholder opens its gaping jaw and bites you!");
             target.TakeDamage(AttackingPower);

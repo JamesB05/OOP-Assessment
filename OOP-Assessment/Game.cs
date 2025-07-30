@@ -19,6 +19,8 @@ namespace OOP_Assessment
             stats = new Statistics();
         }
 
+        private bool isPlayerAlive = true;
+
         public void Start()
         {
             Console.WriteLine("Welcome brave adventurer, please tell me your name: ");
@@ -28,13 +30,16 @@ namespace OOP_Assessment
 
             Console.WriteLine($"\nGreetings, {name}! Your quest awaits...\n");
 
-            while (true)
+            while (isPlayerAlive)
             {
                 currentRoom.Describe();
                 Console.WriteLine("\n what would you like to do? > ");
                 string input = Console.ReadLine().ToLower();
                 HandleCommand(input);
             }
+
+            Console.WriteLine("\nGame over. press any key to exit...");
+            Console.ReadKey();
         }
 
         private void HandleCommand(string input)
@@ -113,6 +118,23 @@ namespace OOP_Assessment
             if (nextRoom != null)
             {
                 currentRoom = nextRoom;
+                if (currentRoom.Monsters.Count > 0)
+                {
+                    foreach (var monster in currentRoom.Monsters)
+                    {
+                        Console.WriteLine($"{monster.Name} looks aggresive!");
+
+                        monster.Attack(player);
+
+                        if (player.Health <= 0)
+                        {
+                            Console.WriteLine("You have been slain by the Monster!");
+                            Console.WriteLine("if you wish to retry please quit and restart");
+                            isPlayerAlive = false;
+                            return;
+                        }
+                    }
+                }
                 stats.RoomsVisited++;
             }
             else

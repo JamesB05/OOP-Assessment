@@ -33,8 +33,9 @@ namespace OOP_Assessment
             ThroneRoom.AddExit("down", TortureChamber);
 
             Armoury.Items.Add(new Weapons("Sharp Sword", 10));
+            Armoury.Items.Add(new Potions("Healing Elixir", 20));
             TortureChamber.Items.Add(new Potions("Healing Elixir", 20));
-            TreasureRoom.Items.Add(new Weapons("Royal Scythe", 20));
+            TreasureRoom.Items.Add(new Weapons("Royal Scepter", 35));
 
 
             TortureChamber.Monsters.Add(new Orc());

@@ -15,7 +15,7 @@ namespace OOP_Assessment
             inventory = new Inventory();
         }
 
-        public override void Attack(Creature target)
+        public virtual void Attack(Creature target)
         {
             Console.WriteLine($"{Name} attacked {target.Name} with {AttackingPower} power.");
             target.TakeDamage(AttackingPower);
