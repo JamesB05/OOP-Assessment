@@ -8,29 +8,29 @@ namespace OOP_Assessment
 {
     public class Inventory
     {
-        private List<Items> items = new List<Items>();
+        private List<Items> Items = new List<Items>();
 
         public void AddItems(Items items)
         {
-            items.Add(items);
+            Items.Add(items);
             Console.WriteLine($"{items.Name} was added to your inventory.");
         }
 
         public Items GetItems(string name)
         {
-            return items.FirstOrDefault(i => i.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            return Items.FirstOrDefault(i => i.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
         public void ListItems()
         {
-            if (items.Count == 0)
+            if (Items.Count == 0)
             {
                 Console.WriteLine("You have no items in your inventory.");
                 return;
             }
 
             Console.WriteLine("Inventory contents:");
-            foreach (var items in items)
+            foreach (var items in Items)
             {
                 Console.WriteLine($"* {items.Name}");
                 
@@ -39,7 +39,10 @@ namespace OOP_Assessment
 
         public List<Items> FilterWeapons()
         {
-            return items.OfType<Weapons>().ToList();
+            return Items
+                .Where(i => i is Weapons)
+                .Cast<Items>()
+                .ToList();
         }
     }
 }

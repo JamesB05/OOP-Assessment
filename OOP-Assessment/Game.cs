@@ -96,7 +96,7 @@ namespace OOP_Assessment
                     break;
 
                 case "quit":
-                    Console.WriteLine("Thanks for playing. Until next time, brave one)";
+                    Console.WriteLine("Thanks for playing. Until next time, brave one");
                     Environment.Exit(0);
                     break;
 
@@ -117,7 +117,7 @@ namespace OOP_Assessment
             }
             else
             {
-                Console.WriteLine("You shall not pass! (Please choose another way)";
+                Console.WriteLine("You shall not pass! (Please choose another way");
             }
         }
     }

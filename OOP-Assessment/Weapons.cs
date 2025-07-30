@@ -19,7 +19,7 @@ namespace OOP_Assessment
         public override void Use(Player player)
         {
             Console.WriteLine($"{player.Name} equipped {Name}, Player attack is now {Damage}.");
-            player.AttackingPower += Damage;
+            player.IncreaseAttackingPower( Damage );
         }
     }
 }

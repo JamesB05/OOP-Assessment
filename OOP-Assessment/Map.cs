@@ -32,7 +32,7 @@ namespace OOP_Assessment
             TreasureRoom.ConnectingRooms("East", TortureChamber);
             TortureChamber.ConnectingRooms("Up", ThroneRoom);
 
-            Armoury.Items.Add(new Weapons("Sharp Sword" 10));
+            Armoury.Items.Add(new Weapons("Sharp Sword", 10));
             TortureChamber.Items.Add(new Potions("Healing Elixir", 20));
             TreasureRoom.Items.Add(new Weapons("Royal Scythe", 20));
 

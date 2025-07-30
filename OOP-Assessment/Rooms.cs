@@ -53,7 +53,7 @@ namespace OOP_Assessment
 
             Console.WriteLine("You look for a path forward, choose your exits:");
             foreach (var exits in Exits)
-                Console.WriteLine($" *{exits.Key}";
+                Console.WriteLine($" *{exits.Key}");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace OOP_Assessment
 
         public void UseItem(string itemName)
         {
-            var item = Inventory.GetItem(itemName);
+            var item = inventory.GetItems(itemName);
             if (item != null)
             {
                 item.Use(this);

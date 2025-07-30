@@ -19,7 +19,7 @@ namespace OOP_Assessment
         public override void Use(Player player)
         {
             Console.WriteLine($"{player.Name} uses a {Name}, it restores {HealAmount} HP.");
-            player.Health += HealAmount;
+            player.Heal(HealAmount);
         }
     }
 }

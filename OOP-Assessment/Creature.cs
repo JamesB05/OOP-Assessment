@@ -30,5 +30,17 @@ namespace OOP_Assessment
                 Console.WriteLine($"Name has been defeated!");
             }
         }
+
+        public void Heal(int amount)
+        {
+            Health += amount;
+            Console.WriteLine($"{Name} healed {amount} HP. Current health: {Health}");
+        }
+
+        public void IncreaseAttackingPower(int amount)
+        {
+            AttackingPower += amount;
+            Console.WriteLine($"{Name}'s attack power increased by {amount}. New power: {AttackingPower}");
+        }
     }
 }

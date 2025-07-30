@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOP_Assessment
 {
-    internal class Beholder
+    public class Beholder : Monsters
     {
+        public Beholder() : base("Beholder", 200, 30) { }
+        public override void Attack(Creature target)
+        {
+            Console.WriteLine("The Beholder opens its gaping jaw and bites you!");
+            target.TakeDamage(AttackingPower);
+        }
     }
 }
