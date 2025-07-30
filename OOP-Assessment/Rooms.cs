@@ -39,8 +39,21 @@ namespace OOP_Assessment
 
             if (Items.Count > 0)
             {
-                Console.WriteLine(""
+                Console.WriteLine("You scout the room and see:");
+                foreach (var items in Items)
+                    Console.WriteLine($" * {items.Name}");
             }
+
+            if (Monsters.Count > 0)
+            {
+                Console.WriteLine("You feel danger in the air, you spot a:");
+                foreach (var monster in Monsters)
+                    Console.WriteLine($" * {monster.Name}");
+            }
+
+            Console.WriteLine("You look for a path forward, choose your exits:");
+            foreach (var exits in Exits)
+                Console.WriteLine($" *{exits.Key}";
         }
     }
 }
