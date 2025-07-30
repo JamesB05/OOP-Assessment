@@ -23,14 +23,14 @@ namespace OOP_Assessment
             Rooms Armoury = new Rooms("Armoury", "Armour and rusty weapons lay bare on the ground, you think about the fate of the previous owners.");
             Rooms ThroneRoom = new Rooms("Throne Room", "You see a gigantic throne before you and feel a powerful presence closing in.");
 
-
-            Entrance.ConnectingRooms("North", Armoury);
-            Armoury.ConnectingRooms("South", Entrance);
-            Armoury.ConnectingRooms("West", TortureChamber);
-            TortureChamber.ConnectingRooms("East", Armoury);
-            TortureChamber.ConnectingRooms("West", TreasureRoom);
-            TreasureRoom.ConnectingRooms("East", TortureChamber);
-            TortureChamber.ConnectingRooms("Up", ThroneRoom);
+            Entrance.AddExit("north", Armoury);
+            Armoury.AddExit("south", Entrance);
+            Armoury.AddExit("west", TortureChamber);
+            TortureChamber.AddExit("east", Armoury);
+            TortureChamber.AddExit("west", TreasureRoom);
+            TreasureRoom.AddExit("east", TortureChamber);
+            TortureChamber.AddExit("up", ThroneRoom);
+            ThroneRoom.AddExit("down", TortureChamber);
 
             Armoury.Items.Add(new Weapons("Sharp Sword", 10));
             TortureChamber.Items.Add(new Potions("Healing Elixir", 20));

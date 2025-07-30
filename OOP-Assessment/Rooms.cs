@@ -55,5 +55,10 @@ namespace OOP_Assessment
             foreach (var exits in Exits)
                 Console.WriteLine($" *{exits.Key}");
         }
+
+        public void AddExit(string direction, Rooms rooms)
+        {
+            Exits[direction.ToLower()] = rooms;
+        }
     }
 }

@@ -117,7 +117,7 @@ namespace OOP_Assessment
             }
             else
             {
-                Console.WriteLine("You shall not pass! (Please choose another way");
+                Console.WriteLine("You shall not pass! (Please choose another way)");
             }
         }
     }
