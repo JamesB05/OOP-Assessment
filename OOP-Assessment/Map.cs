@@ -41,7 +41,6 @@ namespace OOP_Assessment
 
             //adds speicified items to their corresponding rooms
             Armoury.Items.Add(new Weapons("Sharp Sword", 10));
-            Armoury.Items.Add(new Potions("Healing Elixir", 20));
             TortureChamber.Items.Add(new Potions("Healing Elixir", 20));
             TreasureRoom.Items.Add(new Weapons("Royal Scepter", 35));
 
